@@ -1,0 +1,18 @@
+version: '3.5'
+services:
+  server:
+    container_name: simple
+    build: .
+    # command: npm run build
+    # command: node app.js
+    command: npm run dev
+    volumes:
+      - ./src/:/app
+      - /app/node_modules
+    ports:
+      - 8081:3000
+    # depends_on:
+    environment:
+      PORT: 3000
+    restart: always
+
