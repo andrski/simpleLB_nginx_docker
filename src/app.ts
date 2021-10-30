@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.static(path.join('dist')));
 
 app.get('/', (req: Request, res: Response): void => {
-    res.send(`<h1>hello from ${name}!!!!!!!</h1>`);
+    res.send(`<h1 style="color: red;">hello from ${name}!!!!!!!</h1>`);
     res.end();
 });
 
